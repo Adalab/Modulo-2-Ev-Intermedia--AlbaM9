@@ -10,8 +10,10 @@ const triesBox = document.querySelector(".js-tries");
 
 
 
-let valueRandom = getRandomNumber(100);
+const valueRandom = getRandomNumber(100);
+
 console.log(valueRandom);
+
 
 let tries = 0;
 
@@ -21,7 +23,8 @@ numberInput.addEventListener("input", () => {
 numberButton.addEventListener("click", (event) => {
 
     event.preventDefault();
-    triesBox.innerHTML = `número de intentos ${++tries}`;
+    triesBox.innerHTML = `Número de intentos: ${++tries}`;
+
     checkNumber();
 
 })
@@ -31,9 +34,10 @@ function getRandomNumber(max) {
 function checkNumber() {
 
 
-
     let numberValue = parseInt(numberInput.value);
+
     console.log(numberValue);
+
 
     if (numberValue < 0 || numberValue > 100) {
         cluesBox.innerHTML = `El número debe estar
