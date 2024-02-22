@@ -13,11 +13,13 @@
 <body>
 
     <h1>Adivina el número</h1>
-    <label for="">Introduce el número</label>
-    <input type="number">
-    <button class="triesButton">Prueba</button>
-    <textarea name="clues" id="" cols="30" rows="1"></textarea>
-    <textarea name="tries" id="" cols="30" rows="1"></textarea>
+    <form action="">
+        <label for="">Introduce el número</label>
+        <input class="js-numberInput" type="number" value="">
+    </form>
+    <button class="js-triesButton">Prueba</button>
+    <p class="js-clue">Pista: Escribe el número y dale a Prueba</p>
+    <p class="js-tries">Número de intentos :</p>
 
 
     <script src="./js/main.js"></script>
