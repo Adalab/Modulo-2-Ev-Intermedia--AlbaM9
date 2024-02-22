@@ -9,11 +9,11 @@ const triesBox = document.querySelector(".js-tries");
 
 
 
-getRandomNumber(100);
-console.log(getRandomNumber(100));
+
+let valueRandom = getRandomNumber(100);
+console.log(valueRandom);
 
 let tries = 0;
-
 
 numberInput.addEventListener("input", () => {
 });
@@ -21,9 +21,16 @@ numberInput.addEventListener("input", () => {
 numberButton.addEventListener("click", (event) => {
 
     event.preventDefault();
-
-
     triesBox.innerHTML = `número de intentos ${++tries}`;
+    checkNumber();
+
+})
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
+function checkNumber() {
+
+
 
     let numberValue = parseInt(numberInput.value);
     console.log(numberValue);
@@ -33,25 +40,20 @@ numberButton.addEventListener("click", (event) => {
         entre 1 y 100 `;
     }
     else {
-        if (numberValue == getRandomNumber(100)) {
+        if (numberValue == valueRandom) {
             cluesBox.innerHTML = "Has ganado campeona!!";
             console.log("igual");
         }
-        if (numberValue > getRandomNumber(100)) {
+        if (numberValue > valueRandom) {
             cluesBox.innerHTML = "demasiado alto ";
             console.log("alto");
         }
-        if (numberValue < getRandomNumber) {
+        if (numberValue < valueRandom) {
             cluesBox.innerHTML = "demasiado bajo ";
             console.log("bajo");
         }
     }
 
-
-})
-function getRandomNumber(max) {
-    return Math.ceil(Math.random() * max);
 }
-
 
 
